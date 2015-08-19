@@ -1,0 +1,39 @@
+#Instructions on how to run the command line version
+
+# Introduction #
+
+Download the command line enabled distribution jar file, or check out the latest sources from the svn.
+
+
+# Details #
+
+command line synopsis:
+
+> _Path\To\Image minA maxA minB maxB quality counter percentage tests_
+
+**minA**, minimum of the major axis
+
+**maxA**, maximum of the major axis
+
+**minB**, minimum of the minor axis
+
+**maxB**, maximum of the major axis
+
+**quality**, the number of points on the detected ellipse
+
+**counter**, threshold until selection of new pair (for the randomized step ... leave it high ~ 5000 is ok, can be higher depending on the speed of your system)
+
+**percentage**, number of feature points to be selected from total detected feature points (good results for 0.05%)
+
+**tests**, how many time to run the test
+
+
+if the tests are run 1 time, than the detected image is also output to the same folder as the source image.
+
+
+---
+
+
+Example of running on windows from command line:
+
+**>java -cp ;EllipseDetector.jar EllipseDetector Ellipse\data\E1.png 59 71 59 71 100 5000 0.05 1  Ellipse\data\E2.png 86 100 86 100 100 5000 0.05 1**
